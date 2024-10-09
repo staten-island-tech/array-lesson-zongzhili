@@ -46,4 +46,4 @@ const expensiveProducts = products.filter((product) => product.price > 300);
 console.log("Expensive Products:", expensiveProducts);
 
 const goodProducts = products.filter((product) => product.rating >= 4.5);
-console.log("Good Products:", product.name);
+goodProducts.forEach((product) => console.log(product));
