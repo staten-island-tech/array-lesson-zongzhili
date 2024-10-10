@@ -1,16 +1,15 @@
-const students = [
-  { name: "Alice", age: 20, grade: 85 },
-  { name: "Bob", age: 22, grade: 90 },
-  { name: "Charlie", age: 21, grade: 78 },
-  { name: "Diana", age: 23, grade: 95 },
-];
-students.forEach((student) => console.log(student));
+// const students = [
+//   { name: "Alice", age: 20, grade: 85 },
+//   { name: "Bob", age: 22, grade: 90 },
+//   { name: "Charlie", age: 21, grade: 78 },
+//   { name: "Diana", age: 23, grade: 95 },
+// ];
 
-const topStudents = students.filter((student) => student.grade > 80);
-console.log(topStudents);
+// const topStudents = students.filter(
+//   (student) => student.age <= 21 && student.grade > 80
+// );
 
-const youngStudents = students.filter((student) => student.age <= 21);
-console.log(youngStudents);
+// topStudents.forEach((student) => console.log(student));
 //pt 3
 
 //assignment 2
@@ -37,13 +36,11 @@ products.forEach((product) => {
 });
 console.log("Unique Categories:", categories);
 
-const electronics = products.filter(
-  (product) => product.category === "Electronics"
+const expensiveProducts = products.filter(
+  (product) =>
+    product.price > 300 &&
+    product.rating >= 4.5 &&
+    product.category === "Electronics" &&
+    product.price < 1000
 );
-console.log("Electronics:", electronics);
-
-const expensiveProducts = products.filter((product) => product.price > 300);
-console.log("Expensive Products:", expensiveProducts);
-
-const goodProducts = products.filter((product) => product.rating >= 4.5);
-goodProducts.forEach((product) => console.log(product));
+console.log("Expensive and Highly Rated Electronics:", expensiveProducts);
